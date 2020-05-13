@@ -14,6 +14,10 @@
     {
       "url": "http://srb84.srs-x.net/api",
       "description": "Sandbox API srsx"
+    },
+    {
+      "url": "http://srb13.srsx.localhost/api",
+      "description": "Sandbox API Local"
     }
   ],
   "paths": {
