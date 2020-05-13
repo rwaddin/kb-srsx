@@ -1212,6 +1212,128 @@
           "description": ""
         }
       }
+    },
+    "/v2/alimail/register": {
+      "post": {
+        "summary": "Alibaba Mail Register",
+        "tags": [
+          "Alibaba Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-v2-alimail-register",
+        "description": "Registrasi Alibaba Mail",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/alibabamail/alibabamail-register.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/alimail/register_check": {
+      "post": {
+        "summary": "Alibaba Mail Register Check",
+        "tags": [
+          "Alibaba Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-v2-alimail-register_check",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/alibabamail/alibabamail-register-check.v1.json"
+              }
+            }
+          },
+          "description": ""
+        },
+        "description": "Cek Registrasi Alibaba Mail"
+      }
+    },
+    "/v2/alimail/getinfo": {
+      "post": {
+        "summary": "Alibaba Mail Get Info",
+        "tags": [
+          "Alibaba Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-v2-alimail-getinfo",
+        "description": "Get information Alibaba Mail",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/alibabamail/alibabamail-getinfo.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/alimail/cancel": {
+      "post": {
+        "summary": "Alibaba Mail Cancel",
+        "tags": [
+          "Alibaba Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-v2-alimail-cancel",
+        "description": "Cancel product Alibaba Mail",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/alibabamail/alibabamail-cancel.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/v2/alimail/renew": {
+      "post": {
+        "summary": "Alibaba Mail Renew",
+        "tags": [
+          "Alibaba Mail"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-v2-alimail-renew",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/alibabamail/alibabamail-renew.v1.json"
+              }
+            }
+          }
+        },
+        "description": "Renew product Alibaba Mail"
+      }
     }
   },
   "components": {
