@@ -16,11 +16,12 @@
       "description": "API Password"
     },
     "productid": {
-      "type": "integer"
+      "type": "integer",
+      "description": "Product ID"
     },
     "api_id": {
       "type": "integer",
-      "description": ""
+      "description": "API ID"
     },
     "domain": {
       "type": "string",

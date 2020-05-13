@@ -1241,7 +1241,6 @@
         }
       }
     },
-    "/v2/alimail/register_check": {},
     "/v2/alimail/getinfo": {
       "post": {
         "summary": "Alibaba Mail Get Info",
