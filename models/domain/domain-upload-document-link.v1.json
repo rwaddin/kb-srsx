@@ -1,0 +1,35 @@
+{
+  "title": "Domain Upload Document Link",
+  "type": "object",
+  "description": "Dalam proses aktivasi domain ID, diperlukan kelengkapan syarat dokumen. SRS menyediakan interface untuk keperluan upload dokumen. Fungsi API berikut berfungsi untuk menggenerate link ke interface upload.",
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai yang merelasikan api dengan domain\n"
+    }
+  },
+  "required": [
+    "password",
+    "username",
+    "domain",
+    "api_id"
+  ],
+  "x-tags": [
+    "Domain"
+  ]
+}

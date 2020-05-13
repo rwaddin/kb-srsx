@@ -1,0 +1,120 @@
+{
+  "title": "User Update",
+  "type": "object",
+  "x-tags": [
+    "User"
+  ],
+  "description": "Update data user.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "userid": {
+      "type": "string",
+      "description": "Username",
+      "maxLength": 255
+    },
+    "user_username": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Username"
+    },
+    "user_password": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Password User"
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Email contact"
+    },
+    "fname": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama depan"
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama Perusahaan"
+    },
+    "address": {
+      "type": "string",
+      "description": "Alamat",
+      "maxLength": 255
+    },
+    "address2": {
+      "type": "string",
+      "description": "Alamat 2 - (must include address)",
+      "maxLength": 255
+    },
+    "address3": {
+      "type": "string",
+      "description": "Alamat 3 - (must include address2)",
+      "maxLength": 255
+    },
+    "city": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama Kota"
+    },
+    "province": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama Propinsi / Negara bagian"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Kodepos\n",
+      "maxLength": 8
+    },
+    "country": {
+      "type": "string",
+      "maxLength": 3,
+      "description": "Kode negara contoh : ID, MY, SG, AU\n"
+    },
+    "p_kdnegara": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode negara, tanpa \"+\"\n"
+    },
+    "p_kdarea": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode area\n"
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Nomor Telepon\n"
+    },
+    "f_kdnegara": {
+      "type": "string",
+      "description": "Kode negara untuk fax\n",
+      "maxLength": 14
+    },
+    "f_kdarea": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode area fax\n"
+    },
+    "fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Nomor Fax\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "userid"
+  ]
+}

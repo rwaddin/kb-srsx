@@ -1,0 +1,113 @@
+{
+  "title": "Domain Express Register",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Api yang berfungsi untuk mendaftarkan domain ke SRS-X dan Registrar. API ini memiliki fungsi yang sama dengan register domain, hanya saja tidak perlu memasukkan data contact dan user, cukup nickhandle dan userid.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nama domain\n"
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai bebas untuk membuat relasi domain dengan sistem di luar\n"
+    },
+    "periode": {
+      "type": "integer",
+      "description": "periode untuk registrasi\n"
+    },
+    "userid": {
+      "type": "integer",
+      "description": "userid yang mendaftarkan domain\n"
+    },
+    "contact_registrant": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "nickhandle untuk regsitrant\n"
+    },
+    "contact_admin": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "nickhandle untuk admin\n"
+    },
+    "contact_billing": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "nickhandle untuk billing\n"
+    },
+    "contact_tech": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "nickhandle untuk tech\n"
+    },
+    "ns1": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nameserver 1\n"
+    },
+    "ns2": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nameserver 2"
+    },
+    "ns3": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nameserver 3"
+    },
+    "ns4": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nameserver 4"
+    },
+    "autoactive": {
+      "type": "string",
+      "enum": [
+        "on",
+        "off"
+      ],
+      "description": "beri nilai “on” jika ingin menggunakan fitur auto provisioning\n"
+    },
+    "domaindescription": {
+      "type": "string",
+      "description": "Deskripsi domain, diperlukan untuk menunjukkan keterkaitan domain dengan document\n"
+    },
+    "randomhash": {
+      "type": "string",
+      "description": "nilai acak untuk menentukan url upload document\n",
+      "maxLength": 63
+    },
+    "category": {
+      "type": "string",
+      "description": "Wajib hanya untuk domain anything.id option = personal, company, school, university, organization\n",
+      "maxLength": 63
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id",
+    "periode",
+    "userid",
+    "contact_registrant",
+    "contact_admin",
+    "contact_billing",
+    "contact_tech",
+    "ns1",
+    "ns2"
+  ]
+}

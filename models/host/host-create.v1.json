@@ -1,0 +1,47 @@
+{
+  "title": "Host Create",
+  "type": "object",
+  "x-tags": [
+    "Host"
+  ],
+  "description": "Membuat host (child nameserver) untuk domain yang sudah dibuat.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain",
+      "maxLength": 63
+    },
+    "nameserver": {
+      "type": "string",
+      "description": "Nama host yang akan dibuat berdasarkan parameter domain (contoh : ns1.namadomain.co.id)",
+      "maxLength": 255
+    },
+    "api_id": {
+      "description": "Nilai yang merelasikan api dengan domain",
+      "type": "integer"
+    },
+    "ipaddress": {
+      "type": "string",
+      "description": "IP Address (IPV4) yang akan diasosiasikan dengan domain",
+      "format": "ipv4"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "nameserver",
+    "api_id",
+    "ipaddress"
+  ]
+}

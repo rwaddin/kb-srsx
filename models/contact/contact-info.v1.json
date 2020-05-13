@@ -1,0 +1,32 @@
+{
+  "title": "Contact Info",
+  "type": "object",
+  "x-tags": [
+    "Contact"
+  ],
+  "description": "Info contact berdasarkan contactid atau nickhandle ( bisa menggunakan salah satu nichandle / contactid)\n\n",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "contactid": {
+      "type": "integer",
+      "description": "ID contact\n"
+    },
+    "nickhandle": {
+      "type": "integer",
+      "description": "Nickhandle contact\n"
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title": "DNS Edit Record",
+  "type": "object",
+  "x-tags": [
+    "DNS"
+  ],
+  "description": "Mengedit DNS Record",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "dnsid": {
+      "type": "string"
+    },
+    "record": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "dnsid",
+    "record"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Reseller Add Subreseller Fund",
+  "type": "object",
+  "x-tags": [
+    "Reseller"
+  ],
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "resellerid": {
+      "description": "ID Subreseller",
+      "type": "integer"
+    },
+    "amount": {
+      "type": "integer",
+      "description": "Nominal FUN"
+    }
+  },
+  "required": [
+    "password",
+    "username",
+    "resellerid",
+    "amount"
+  ],
+  "description": "deskirpsi mdo"
+}

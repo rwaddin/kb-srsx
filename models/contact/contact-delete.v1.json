@@ -1,0 +1,29 @@
+{
+  "title": "Contact Delete",
+  "type": "object",
+  "x-tags": [
+    "Contact"
+  ],
+  "description": "Menghapus contact.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "contactid": {
+      "type": "integer",
+      "description": "ID contact yang akan dihapus\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "contactid"
+  ]
+}

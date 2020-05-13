@@ -1,0 +1,135 @@
+{
+  "title": "User Create",
+  "type": "object",
+  "x-tags": [
+    "User"
+  ],
+  "description": "Membuat user baru.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "user_username": {
+      "type": "string",
+      "default": "rwaddin",
+      "description": "Username",
+      "maxLength": 255
+    },
+    "user_password": {
+      "type": "string",
+      "default": "password",
+      "description": "Password User",
+      "maxLength": 255
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Email contact"
+    },
+    "fname": {
+      "type": "string",
+      "default": "akhul syaifudin",
+      "description": "Nama depan",
+      "maxLength": 32
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama Perusahaan"
+    },
+    "address": {
+      "type": "string",
+      "default": "Lempongsari 39c",
+      "description": "Alamat",
+      "maxLength": 255
+    },
+    "address2": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Alamat 2"
+    },
+    "address3": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Alamat 3"
+    },
+    "city": {
+      "type": "string",
+      "default": "Sleman",
+      "description": "Nama Kota",
+      "maxLength": 32
+    },
+    "province": {
+      "type": "string",
+      "default": "Jawa Tengah",
+      "description": "Nama Propinsi / Negara bagian",
+      "maxLength": 32
+    },
+    "postal_code": {
+      "type": "string",
+      "default": "54545",
+      "description": "Kodepos",
+      "maxLength": 8
+    },
+    "country": {
+      "type": "string",
+      "default": "ID",
+      "description": "Kode negara contoh : ID, MY, SG, AU",
+      "maxLength": 3
+    },
+    "p_kdnegara": {
+      "type": "string",
+      "default": "6285747277466",
+      "description": "Kode negara, tanpa \"+\"",
+      "maxLength": 14
+    },
+    "p_kdarea": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode area"
+    },
+    "phone": {
+      "type": "string",
+      "default": "087737277444",
+      "description": "Nomor Telepon",
+      "maxLength": 14
+    },
+    "f_kdnegara": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode negara untuk fax"
+    },
+    "f_kdarea": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode area fax\n"
+    },
+    "fax": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Nomor Fax\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "user_username",
+    "user_password",
+    "fname",
+    "address",
+    "city",
+    "province",
+    "postal_code",
+    "country",
+    "p_kdnegara",
+    "p_kdarea",
+    "phone"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "title": "Host Update",
+  "type": "object",
+  "x-tags": [
+    "Host"
+  ],
+  "description": "Melakukan update ip terhadap  host (child nameserver) domain yang sudah dibuat.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nama domain"
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai yang merelasikan api dengan domain"
+    },
+    "nameserver": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nama host yang akan diupdate berdasarkan parameter domain (contoh : ns1.namadomain.co.id)"
+    },
+    "ipaddress": {
+      "type": "string",
+      "format": "ipv4",
+      "description": "IP Address (IPV4) yang akan diasosiasikan dengan domain"
+    }
+  },
+  "required": [
+    "password",
+    "domain",
+    "api_id",
+    "nameserver",
+    "ipaddress"
+  ]
+}

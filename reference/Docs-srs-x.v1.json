@@ -1,0 +1,1276 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Docs srs-x",
+    "version": "1.0",
+    "description": "Docs srs-x Digital Registra",
+    "contact": {
+      "name": "Digital Registra",
+      "url": "https://www.digitalregistra.co.id/",
+      "email": "info@digitalregistra.co.id"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://srb84.srs-x.net/api",
+      "description": "Sandbox API srsx"
+    }
+  ],
+  "paths": {
+    "/domain/register": {
+      "post": {
+        "summary": "Domain Register",
+        "tags": [
+          "Domain"
+        ],
+        "operationId": "domain-register",
+        "description": "API yang berfungsi untuk mendaftarkan domain ke SRS-X dan Registrar. API ini juga sekaligus akan membuat user di SRS-X jika email yang digunakan belum pernah didaftarkan di SRS-X",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-register.v1.json"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/reseller/cekfund": {
+      "post": {
+        "summary": " Cek Reseller Fund",
+        "tags": [
+          "Reseller"
+        ],
+        "operationId": "post-reseller-cekfund",
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/reseller/cekresellerfund.v1.json"
+              },
+              "examples": {
+                "example-1": {}
+              }
+            }
+          },
+          "description": ""
+        },
+        "description": "Cek sisa deposit reseller",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/reseller/getprice": {
+      "post": {
+        "summary": "Get Reseller Price",
+        "tags": [
+          "Reseller"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-reseller-getprice",
+        "description": "Dapatkan pricelist reseller",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/reseller/getresellerprice.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/billing/addsubresellerfund": {
+      "post": {
+        "summary": "Add Subreseller Direct Fund",
+        "tags": [
+          "Reseller"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-billing-addsubresellerfund",
+        "description": "Menambahkan deposit subreseller",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/reseller/addsubresellerfund.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/v2/reseller/subresellers": {
+      "post": {
+        "summary": "List Subreseller",
+        "tags": [
+          "Reseller"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ok"
+          }
+        },
+        "operationId": "post-v2-reseller-subresellers",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/reseller/listsubreseller.v1.json"
+              }
+            }
+          },
+          "description": ""
+        },
+        "parameters": [],
+        "description": "Mendapatkan list subreseller"
+      }
+    },
+    "/v2/reseller/subreseller": {
+      "post": {
+        "summary": "Info Subreseller",
+        "tags": [
+          "Reseller"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "operationId": "post-v2-reseller-infosubreseller",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/reseller/infosubreseller.v1.json"
+              }
+            }
+          }
+        },
+        "description": "Mendapatkan detail subreseller"
+      }
+    },
+    "/domain/moveservice": {
+      "post": {
+        "summary": "Move Service",
+        "tags": [
+          "Move Service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-moveservice",
+        "description": "Melakukan move service domain dari customer satu ke customer lainnya, dalam satu registrar",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/moveservice/moveservice.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dns/info": {
+      "post": {
+        "summary": "Info DNS",
+        "tags": [
+          "DNS"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-dns-info",
+        "description": "Info DNS",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dns/dnsinfo.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/forward/configure": {
+      "post": {
+        "summary": "Initial Forwarder",
+        "tags": [
+          "Forward"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-forward-configure",
+        "description": "Membuat record DNS untuk keperluan forward, dan menambah catatan record forward di server forwarder",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/forward/initialforwarder.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/forward/status": {
+      "post": {
+        "summary": "Status Forward",
+        "tags": [
+          "Forward"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-forward-status",
+        "description": "Melihat catatan forward domain",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/forward/statusforward.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/forward/update": {
+      "post": {
+        "summary": "Update Forward",
+        "tags": [
+          "Forward"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-forward-update",
+        "description": "Update record domain forwarding",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/forward/updateforward.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dns/edit": {
+      "post": {
+        "summary": "Edit DNS Record",
+        "tags": [
+          "DNS"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-dns-edit",
+        "description": "Mengedit DNS Record",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dns/dnsinfo.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/dns/start": {
+      "post": {
+        "summary": "Inisialisasi DNS",
+        "tags": [
+          "DNS"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-dns-start",
+        "description": "Mendaftarkan DNS ke dalam Server DNS Record",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dns/dnsinisialisasi.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/dns/create": {
+      "post": {
+        "summary": "Membuat DNS Record",
+        "tags": [
+          "DNS"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-dns-create",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dns/dncreaterecord.v1.json"
+              }
+            }
+          },
+          "description": ""
+        },
+        "description": "Membuat DNS Record"
+      }
+    },
+    "/dns/delete": {
+      "post": {
+        "summary": "Delete DNS Record",
+        "tags": [
+          "DNS"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-dns-delete",
+        "description": "Delete DNS",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dns/dnsdeleterecord.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/listds": {
+      "post": {
+        "summary": "List DNSSEC Records",
+        "tags": [
+          "DNSSEC"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-listds",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dnssec/dnssec-list-record.v1.json"
+              }
+            }
+          }
+        },
+        "description": "Mengembalikan daftar record-record dari DNSSEC suatu domain."
+      }
+    },
+    "/domain/addds": {
+      "post": {
+        "summary": "Add DNSSEC Record",
+        "tags": [
+          "DNSSEC"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-addds",
+        "description": "Menambah record DNSSEC suatu domain.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dnssec/dnssec-add-record.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/delds": {
+      "post": {
+        "summary": "Delete DNSSEC Record",
+        "tags": [
+          "DNSSEC"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-delds",
+        "description": "Menghapus record DNSSEC suatu domain.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/dnssec/dnssec-delete-record.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/host/addchild": {
+      "post": {
+        "summary": "Create Host",
+        "tags": [
+          "Host"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-host-addchild",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/host/host-create.v1.json"
+              }
+            }
+          }
+        },
+        "description": "Membuat host (child nameserver) untuk domain yang sudah dibuat."
+      }
+    },
+    "/host/updatechild": {
+      "post": {
+        "summary": "Update Host",
+        "tags": [
+          "Host"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-host-updatechild",
+        "description": "Melakukan update ip terhadap  host (child nameserver) domain yang sudah dibuat.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/host/host-update.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/host/info": {
+      "post": {
+        "summary": "Info Host",
+        "tags": [
+          "Host"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-host-info",
+        "description": "Melihat detail host , terutama ip dari host tersebut",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/host/host-info.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/host/delchild": {
+      "post": {
+        "summary": "Delete Host",
+        "tags": [
+          "Host"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-host-delchild",
+        "description": "Menghapus host. Host hanya bisa dihapus jika tidak berelasi dengan domain lain.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/host/host-delete.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/setepp": {
+      "post": {
+        "summary": "SET EPP",
+        "tags": [
+          "EPP"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-setepp",
+        "description": "Berfungsi untuk  mengubah authcode (EPP) domain\n\n",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/epp/eppset.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/getepp": {
+      "post": {
+        "summary": "GET EPP",
+        "tags": [
+          "EPP"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-getepp",
+        "description": "Berfungsi untuk mendapatkan kode EPP dari domain tertentu",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/epp/eppget.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/create": {
+      "post": {
+        "summary": "Create User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-user-create",
+        "description": "Membuat user baru.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/user/user-create.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/user/info": {
+      "post": {
+        "summary": "Info User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-user-info",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/user/user-info.v1.json"
+              }
+            }
+          },
+          "description": ""
+        },
+        "description": "Info user berdasarkan userid"
+      }
+    },
+    "/user/update": {
+      "post": {
+        "summary": "Update User",
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-user-update",
+        "description": "Update data user.\n\n",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/user/user-update.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/contact/delete": {
+      "post": {
+        "summary": "Delete Contact",
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-contact-delete",
+        "description": "Menghapus contact.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/contact/contact-delete.v1.json"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/contact/contact-delete.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/contact/info": {
+      "post": {
+        "summary": "Info Contact",
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-contact-info",
+        "description": "Info contact berdasarkan contactid atau nickhandle ( bisa menggunakan salah satu nichandle / contactid)",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/contact/contact-info.v1.json"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "../models/contact/contact-info.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/contact/update": {
+      "post": {
+        "summary": "Update Contact",
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-contact-update",
+        "description": "Mengubah data contact.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/contact/contact-update.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contact/create": {
+      "post": {
+        "summary": "Create Contact",
+        "tags": [
+          "Contact"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-contact-create",
+        "description": "Membuat data kontak baru.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/contact/contact-create.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/transfer": {
+      "post": {
+        "summary": "Transfer Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-transfer",
+        "description": "Api yang berfungsi untuk melakukan transfer domain ke SRS-X dan Registrar. API ini juga sekaligus akan membuat user di SRS-X jika email yang digunakan belum pernah didaftarkan di SRS-X\n\n",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-transfer.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/lock": {
+      "post": {
+        "summary": "Lock Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-lock",
+        "description": "Mengunci domain agar tidak bisa dilakukan modifikasi content (Nameserver, Contact, dan kode EPP)",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-lock.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/unlock": {
+      "post": {
+        "summary": "Unlock Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-unlock",
+        "description": "Membuka kunci domain agar  bisa dilakukan modifikasi content (Nameserver, Contact, dan kode EPP)",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-unlock.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/renew": {
+      "post": {
+        "summary": "Renew Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-renew",
+        "description": "Melakukan perpanjangan masa aktif domain",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-renew.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/info": {
+      "post": {
+        "summary": "Info Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-info",
+        "description": "Melihat detail dari domain",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-info.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/updatens": {
+      "post": {
+        "summary": "Update Nameserver",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-updatens",
+        "description": "Api yang berfungsi untuk mengupdate Nameserver dari domain tertentu",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-nameserver-update.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/documenturl": {
+      "post": {
+        "summary": "Upload Document Link",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-documenturl",
+        "description": "Dalam proses aktivasi domain ID, diperlukan kelengkapan syarat dokumen. SRS menyediakan interface untuk keperluan upload dokumen. Fungsi API berikut berfungsi untuk menggenerate link ke interface upload.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-upload-document-link.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/editcontact": {
+      "post": {
+        "summary": "Update Contact Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-editcontact",
+        "description": "Melakukan update contact dari domain",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-update-contact.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/expressregister": {
+      "post": {
+        "summary": "Express Register",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-expressregister",
+        "description": "Api yang berfungsi untuk mendaftarkan domain ke SRS-X dan Registrar. API ini memiliki fungsi yang sama dengan register domain, hanya saja tidak perlu memasukkan data contact dan user, cukup nickhandle dan userid.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-express-register.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/expresstransfer": {
+      "post": {
+        "summary": "Express Transfer",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-expresstransfer",
+        "description": "Api yang berfungsi untuk mentrasfer domain ke SRS-X. API ini memiliki fungsi yang sama dengan transfer domain, hanya saja tidak perlu memasukkan data contact dan user, cukup nickhandle dan userid.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/domain/domain-express-transfer.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/suspend": {
+      "post": {
+        "summary": "Suspend Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-suspend",
+        "description": "API yang digunakan untuk mensuspend sebuah domain tertentu.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-suspend.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/unsuspend": {
+      "post": {
+        "summary": "Unsuspend Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-unsuspend",
+        "description": "API yang digunakan untuk mengaktivasi karena suspend dari sebuah domain tertentu.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/domain/domain-unsuspend.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/set_idprotection": {
+      "post": {
+        "summary": "Set ID Protection",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-set_idprotection",
+        "description": "API yang digunakan untuk mengeset fitur ID Protection untuk domain tertentu.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/domain/domain-setid-protection.v1.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/domain/veri_info": {
+      "post": {
+        "summary": "Check Verification Info",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-veri_info",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-check-verification-info.v1.json"
+              }
+            }
+          }
+        },
+        "description": "API yang digunakan untuk mengecek informasi verifikasi domain."
+      }
+    },
+    "/domain/resend_raa": {
+      "post": {
+        "summary": "Resend Verification Email",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-resend_raa",
+        "description": "API yang digunakan untuk mengirim kembali email verifikasi domain.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-resend-verification-email.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/cancel": {
+      "post": {
+        "summary": "Cancel Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-cancel",
+        "description": "API yang digunakan untuk membatalkan atau menghentikan langganan untuk domain tertentu.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "../models/domain/domain-cancel.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/domain/check": {
+      "post": {
+        "summary": "Check Domain",
+        "tags": [
+          "Domain"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-domain-check",
+        "description": "API yang digunakan untuk mengecek availability domain.",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "../models/domain/domain-check.v1.json"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "username": {
+        "name": "API Username",
+        "type": "apiKey",
+        "in": "header"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Contact",
+      "description": "Contact description"
+    },
+    {
+      "name": "DNS",
+      "description": "DNS description"
+    },
+    {
+      "name": "DNSSEC",
+      "description": "DNSSEC description"
+    },
+    {
+      "name": "Domain",
+      "description": "Domain description"
+    },
+    {
+      "name": "EPP",
+      "description": "EPP description"
+    },
+    {
+      "name": "Forward",
+      "description": "Forward description"
+    },
+    {
+      "name": "Host",
+      "description": "Host description"
+    },
+    {
+      "name": "Move Service",
+      "description": "Move Service description"
+    },
+    {
+      "name": "Reseller",
+      "description": "Reseller description"
+    },
+    {
+      "name": "User",
+      "description": "User description"
+    }
+  ],
+  "externalDocs": {
+    "description": "Digital Registra",
+    "url": "http://google.com"
+  },
+  "security": [
+    {
+      "username": []
+    }
+  ]
+}

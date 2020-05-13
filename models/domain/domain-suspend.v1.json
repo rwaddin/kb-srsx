@@ -1,0 +1,39 @@
+{
+  "title": "Domain Duspend",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "API yang digunakan untuk mensuspend sebuah domain tertentu.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "reason": {
+      "type": "string",
+      "description": "Alasan domain disuspend\n"
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai yang merelasikan api dengan domain\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id"
+  ]
+}

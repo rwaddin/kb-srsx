@@ -1,0 +1,45 @@
+{
+  "title": "Domain Set ID Protection",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "API yang digunakan untuk mengeset fitur ID Protection untuk domain tertentu.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 63,
+      "description": "Nama domain\n"
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai yang merelasikan api dengan domain\n"
+    },
+    "idprotection": {
+      "type": "boolean",
+      "default": "1",
+      "enum": [
+        "1",
+        "0"
+      ],
+      "description": "ID Protection (1 atau 0)\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id",
+    "idprotection"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "title": "header-request",
+  "type": "object",
+  "x-tags": [
+    "Header"
+  ],
+  "properties": {
+    "Content-Type": {
+      "type": "string",
+      "default": "application/x-www-form-urlencoded"
+    }
+  }
+}

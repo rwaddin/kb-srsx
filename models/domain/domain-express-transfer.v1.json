@@ -1,0 +1,92 @@
+{
+  "title": "Domain Express Transfer",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Api yang berfungsi untuk mentrasfer domain ke SRS-X. API ini memiliki fungsi yang sama dengan transfer domain, hanya saja tidak perlu memasukkan data contact dan user, cukup nickhandle dan userid.\n\n",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "type": "integer",
+      "description": "Nilai bebas untuk membuat relasi domain dengan sistem di luar\n"
+    },
+    "periode": {
+      "type": "integer",
+      "default": "1",
+      "description": "periode untuk registrasi (nilai ini harus 1)\n"
+    },
+    "userid": {
+      "description": "userid yang mendaftarkan domain\n",
+      "type": "integer"
+    },
+    "contact_registrant": {
+      "type": "string",
+      "description": "nickhandle untuk regsitrant\n",
+      "maxLength": 63
+    },
+    "contact_admin": {
+      "type": "string",
+      "description": "nickhandle untuk admin\n",
+      "maxLength": 63
+    },
+    "contact_billing": {
+      "type": "string",
+      "description": "nickhandle untuk billing\n",
+      "maxLength": 63
+    },
+    "contact_tech": {
+      "type": "string",
+      "description": "nickhandle untuk tech\n",
+      "maxLength": 63
+    },
+    "ns1": {
+      "type": "string",
+      "description": "Nameserver 1\n",
+      "maxLength": 63
+    },
+    "ns2": {
+      "type": "string",
+      "description": "Nameserver 2\n",
+      "maxLength": 63
+    },
+    "ns3": {
+      "type": "string",
+      "description": "Nameserver 3",
+      "maxLength": 63
+    },
+    "randomhash": {
+      "type": "string",
+      "description": "nilai acak untuk menentukan url upload document\n",
+      "maxLength": 63
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id",
+    "periode",
+    "userid",
+    "contact_registrant",
+    "contact_admin",
+    "contact_billing",
+    "contact_tech",
+    "ns1",
+    "ns2"
+  ]
+}

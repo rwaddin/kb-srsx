@@ -1,0 +1,37 @@
+{
+  "title": "Domain Info",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Melihat detail dari domain",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "default": "addin-swagger.com",
+      "description": "Nama domain yang akan dicari\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "type": "integer",
+      "default": 277466,
+      "description": "Nilai yang merelasikan api dengan domain\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id"
+  ]
+}

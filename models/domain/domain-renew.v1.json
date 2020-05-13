@@ -1,0 +1,40 @@
+{
+  "title": "Domain Renew",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Melakukan perpanjangan masa aktif domain",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "description": "Nilai yang merelasikan api dengan domain\n",
+      "type": "integer"
+    },
+    "periode": {
+      "type": "integer",
+      "description": "Jumlah tahun yang diinginkan untuk merenew domain\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id",
+    "periode"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Forward Initial",
+  "type": "object",
+  "x-tags": [
+    "Forward"
+  ],
+  "description": "Membuat record DNS untuk keperluan forward, dan menambah catatan record forward di server forwarder",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Nama Domain"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Move Service",
+  "type": "object",
+  "x-tags": [
+    "Move Service"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain"
+    },
+    "user_userid": {
+      "description": "Userid Customer Tujuan",
+      "type": "integer"
+    },
+    "user_username": {
+      "type": "string",
+      "description": "Username Customer Tujuan",
+      "format": "email"
+    },
+    "epp_code": {
+      "type": "string",
+      "description": "AuthCode domain",
+      "maxLength": 255
+    },
+    "current_contact": {
+      "type": "boolean",
+      "description": "Menggunakan kontak asal atau tidak"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "user_userid",
+    "user_username",
+    "epp_code",
+    "current_contact"
+  ]
+}

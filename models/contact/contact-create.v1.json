@@ -1,0 +1,122 @@
+{
+  "title": "Contact Create",
+  "type": "object",
+  "x-tags": [
+    "Contact"
+  ],
+  "description": "Membuat data kontak baru.",
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "userid": {
+      "type": "string",
+      "default": "1",
+      "description": "ID User\n",
+      "maxLength": 32
+    },
+    "fname": {
+      "type": "string",
+      "default": "akhul",
+      "description": "Nama depan\n",
+      "maxLength": 32
+    },
+    "lname": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama belakang\n"
+    },
+    "email": {
+      "type": "string",
+      "default": "addin@onewaymail.com",
+      "description": "Email contact\n",
+      "maxLength": 63
+    },
+    "company": {
+      "type": "string",
+      "maxLength": 32,
+      "description": "Nama Perusahaan, jika untuk pribadi masukkan \"personal\"\n"
+    },
+    "address": {
+      "type": "string",
+      "default": "Jl lempongsari 39c",
+      "description": "Alamat",
+      "maxLength": 255
+    },
+    "address1": {
+      "type": "string",
+      "description": "Alamat 1",
+      "maxLength": 255
+    },
+    "address2": {
+      "type": "string",
+      "description": " Alamat 2",
+      "maxLength": 255
+    },
+    "city": {
+      "type": "string",
+      "default": "sleman",
+      "description": "Nama Kota\n",
+      "maxLength": 32
+    },
+    "province": {
+      "type": "string",
+      "default": "yogyakarta",
+      "description": "Nama Propinsi / Negara bagian\n",
+      "maxLength": 32
+    },
+    "phone-cc": {
+      "type": "string",
+      "maxLength": 14,
+      "description": "Kode negara tanpa tanda \"+\"\n"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Nomor Telepon tanpa tanda\n",
+      "maxLength": 14
+    },
+    "fax-cc": {
+      "type": "string",
+      "description": "Kode negara tanpa tanda \"+\"\n",
+      "maxLength": 14
+    },
+    "fax": {
+      "type": "string",
+      "description": "Nomor Fax sertakan kode negara tanpa tanda \"+\"\n",
+      "maxLength": 14
+    },
+    "country": {
+      "type": "string",
+      "default": "ID",
+      "description": "Kode negara contoh : ID, MY, SG, AU\n",
+      "maxLength": 3
+    },
+    "postal_code": {
+      "type": "string",
+      "default": "53194",
+      "description": "Kodepos",
+      "maxLength": 8
+    }
+  },
+  "required": [
+    "password",
+    "username",
+    "userid",
+    "fname",
+    "email",
+    "company",
+    "address",
+    "city",
+    "province",
+    "phone",
+    "country",
+    "postal_code"
+  ]
+}

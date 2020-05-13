@@ -1,0 +1,51 @@
+{
+  "title": "DNSSEC Add Record",
+  "type": "object",
+  "x-tags": [
+    "DNSSEC"
+  ],
+  "description": "Menambah record DNSSEC suatu domain.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama Domain",
+      "maxLength": 255
+    },
+    "keytag": {
+      "type": "integer",
+      "description": "DNSSEC Key Tag (nilai harus antara 0 sampai 65535)"
+    },
+    "algorithm": {
+      "type": "integer",
+      "description": "DNSSEC Algorithm"
+    },
+    "digesttype": {
+      "type": "integer",
+      "description": "DNSSEC Digest Type"
+    },
+    "digest": {
+      "type": "string",
+      "description": "DNSSEC Digest (panjang nilai harus 40 atau 64 karaketer)",
+      "maxLength": 255
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "keytag",
+    "algorithm",
+    "digesttype",
+    "digest"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Forward Update",
+  "type": "object",
+  "x-tags": [
+    "Forward"
+  ],
+  "description": "Update record domain forwarding",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Nama Domain"
+    },
+    "target": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Target Forward"
+    },
+    "header": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Header (jika menggunakan masking URL)"
+    },
+    "noframe": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Tampilan untuk browser tanpa fasilitas iframe (jika menggunakan masking URL)"
+    },
+    "type": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "type forwarder (redirect / iframe)\n"
+    },
+    "subdomain": {
+      "type": "boolean",
+      "description": "forwarding redirect"
+    },
+    "path": {
+      "type": "boolean",
+      "description": "path redirect"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "target"
+  ]
+}

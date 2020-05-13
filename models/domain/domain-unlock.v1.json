@@ -1,0 +1,44 @@
+{
+  "title": "Domain Unlock",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Membuka kunci domain agar  bisa dilakukan modifikasi content (Nameserver, Contact, dan kode EPP)",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "description": "Nilai yang merelasikan api dengan domain\n",
+      "type": "integer"
+    },
+    "reseller_lock": {
+      "type": "string",
+      "enum": [
+        "0",
+        "1"
+      ],
+      "description": "Parameter yang menentukan domain di unlock\n"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "api_id",
+    "reseller_lock"
+  ]
+}

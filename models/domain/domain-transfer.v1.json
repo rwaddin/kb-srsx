@@ -1,0 +1,186 @@
+{
+  "title": "Domain Transfer",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Api yang berfungsi untuk melakukan transfer domain ke SRS-X dan Registrar. API ini juga sekaligus akan membuat user di SRS-X jika email yang digunakan belum pernah didaftarkan di SRS-X",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n"
+    },
+    "transfersecret": {
+      "type": "string",
+      "description": "Kode EPP\n",
+      "maxLength": 16
+    },
+    "api_id": {
+      "description": "Nilai bebas untuk membuat relasi domain dengan sistem di luar\n",
+      "type": "integer"
+    },
+    "periode": {
+      "description": "periode untuk registrasi\n",
+      "type": "integer"
+    },
+    "ns1": {
+      "type": "string",
+      "description": "Nameserver 1",
+      "maxLength": 63
+    },
+    "ns2": {
+      "type": "string",
+      "description": "Nameserver 2",
+      "maxLength": 63
+    },
+    "ns3": {
+      "type": "string",
+      "description": "Nameserver 3",
+      "maxLength": 63
+    },
+    "ns4": {
+      "type": "string",
+      "description": "Nameserver 4\n",
+      "maxLength": 63
+    },
+    "fname": {
+      "type": "string",
+      "description": "Nama depan\n",
+      "maxLength": 32
+    },
+    "lname": {
+      "type": "string",
+      "description": "Nama belakang\n",
+      "maxLength": 32
+    },
+    "address1": {
+      "type": "string",
+      "description": "Alamat ",
+      "maxLength": 255
+    },
+    "address2": {
+      "type": "string",
+      "description": "Alamat 2\n",
+      "maxLength": 255
+    },
+    "city": {
+      "type": "string",
+      "description": "Nama Kota\n",
+      "maxLength": 32
+    },
+    "state": {
+      "type": "string",
+      "description": "Nama Propinsi / Negara bagian\n",
+      "maxLength": 32
+    },
+    "country": {
+      "type": "string",
+      "default": "ID",
+      "description": "Kode negara contoh : ID, MY, SG, AU\n",
+      "maxLength": 3
+    },
+    "postcode": {
+      "type": "string",
+      "default": "55523",
+      "description": "Kodepos",
+      "maxLength": 8
+    },
+    "phonenumber": {
+      "type": "string",
+      "default": "085747277366",
+      "description": "Nomor Telepon sertakan kode negara tanpa tanda \"+\"\n",
+      "maxLength": 14
+    },
+    "email": {
+      "type": "string",
+      "description": "Email contact\n",
+      "maxLength": 63
+    },
+    "user_username": {
+      "type": "string",
+      "description": "username (email) untuk login ke SRS-X\n",
+      "maxLength": 63
+    },
+    "user_fname": {
+      "type": "string",
+      "description": "Nama depan\n",
+      "maxLength": 32
+    },
+    "user_lname": {
+      "type": "string",
+      "description": "Nama belakang\n",
+      "maxLength": 32
+    },
+    "user_company": {
+      "type": "string",
+      "description": "Nama Perusahaan, jika untuk pribadi masukkan \"personal\"\n",
+      "maxLength": 32
+    },
+    "user_address": {
+      "type": "string",
+      "description": "Alamat ",
+      "maxLength": 255
+    },
+    "user_address2": {
+      "type": "string",
+      "description": "Alamat 2\n",
+      "maxLength": 255
+    },
+    "user_city": {
+      "type": "string",
+      "description": "Nama Kota\n",
+      "maxLength": 32
+    },
+    "user_province": {
+      "type": "string",
+      "description": "Nama Propinsi / Negara bagian\n",
+      "maxLength": 32
+    },
+    "user_country": {
+      "type": "string",
+      "description": "Kode negara contoh : ID, MY, SG, AU\n",
+      "maxLength": 3
+    },
+    "user_postal_code": {
+      "type": "string",
+      "description": "Kodepos",
+      "maxLength": 8
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "transfersecret",
+    "api_id",
+    "periode",
+    "ns1",
+    "ns2",
+    "fname",
+    "address1",
+    "city",
+    "state",
+    "country",
+    "postcode",
+    "phonenumber",
+    "email",
+    "user_username",
+    "user_fname",
+    "user_company",
+    "user_address",
+    "user_city",
+    "user_province",
+    "user_country",
+    "user_postal_code"
+  ]
+}

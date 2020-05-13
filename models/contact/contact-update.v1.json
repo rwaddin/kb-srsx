@@ -1,0 +1,98 @@
+{
+  "title": "Contact Update",
+  "type": "object",
+  "x-tags": [
+    "Contact"
+  ],
+  "description": "Mengubah data contact.",
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "contactid": {
+      "description": "ID contact yang di berikan ketika contact di generate;\n",
+      "type": "integer"
+    },
+    "nickhandle": {
+      "type": "string",
+      "description": "Nickhandle contact yang di berikan ketika contact di generate;\n",
+      "maxLength": 255
+    },
+    "fname": {
+      "type": "string",
+      "description": "Nama depan\n",
+      "maxLength": 32
+    },
+    "lname": {
+      "type": "string",
+      "description": "Nama belakang\n",
+      "maxLength": 32
+    },
+    "email": {
+      "type": "string",
+      "description": "Email contact\n",
+      "maxLength": 63
+    },
+    "company": {
+      "type": "string",
+      "description": "Nama Perusahaan, jika untuk pribadi masukkan \"personal\"\n",
+      "maxLength": 32
+    },
+    "address": {
+      "type": "string",
+      "description": "Alamat",
+      "maxLength": 255
+    },
+    "address2": {
+      "type": "string",
+      "description": "Alamat2",
+      "maxLength": 255
+    },
+    "address3": {
+      "type": "string",
+      "description": "Alamat3",
+      "maxLength": 255
+    },
+    "city": {
+      "type": "string",
+      "description": "Nama Kota\n",
+      "maxLength": 32
+    },
+    "province": {
+      "type": "string",
+      "description": "Nama Propinsi / Negara bagian\n",
+      "maxLength": 32
+    },
+    "phone": {
+      "type": "string",
+      "description": "Nomor Telepon sertakan kode negara tanpa tanda \"+\"\n",
+      "maxLength": 14
+    },
+    "fax": {
+      "type": "string",
+      "description": "Nomor Fax sertakan kode negara tanpa tanda \"+\"\n",
+      "maxLength": 14
+    },
+    "country": {
+      "type": "string",
+      "description": "Kode negara contoh : ID, MY, SG, AU\n",
+      "maxLength": 3
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Kodepos",
+      "maxLength": 8
+    }
+  },
+  "required": [
+    "password",
+    "username"
+  ]
+}

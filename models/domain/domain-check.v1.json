@@ -1,0 +1,30 @@
+{
+  "title": "Domain Check",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "API yang digunakan untuk mengecek availability domain.\n\n",
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    }
+  },
+  "required": [
+    "password",
+    "username",
+    "domain"
+  ]
+}

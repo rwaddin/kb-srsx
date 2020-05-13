@@ -1,0 +1,40 @@
+{
+  "title": "Reseller List Subreseller",
+  "type": "object",
+  "x-tags": [
+    "Reseller"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "search": {
+      "type": "string",
+      "description": "resellerID / Email reseller",
+      "maxLength": 32
+    },
+    "limit": {
+      "type": "integer",
+      "description": "limit yang dimunculkan dalam hasil list",
+      "maximum": 10
+    },
+    "offset": {
+      "type": "integer",
+      "description": "offset untuk keperluan paginasi",
+      "maximum": 10,
+      "exclusiveMaximum": false
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ],
+  "description": ""
+}

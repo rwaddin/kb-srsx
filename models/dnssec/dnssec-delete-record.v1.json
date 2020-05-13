@@ -1,0 +1,35 @@
+{
+  "title": "DNSSEC Delete Record",
+  "type": "object",
+  "x-tags": [
+    "DNSSEC"
+  ],
+  "description": "Menghapus record DNSSEC suatu domain.",
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama Domain",
+      "maxLength": 255
+    },
+    "id": {
+      "type": "integer",
+      "description": "DNSSEC Record ID"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "domain",
+    "id"
+  ]
+}

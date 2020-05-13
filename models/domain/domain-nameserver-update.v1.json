@@ -1,0 +1,43 @@
+{
+  "title": "Domain Nameserver Update",
+  "type": "object",
+  "x-tags": [
+    "Domain"
+  ],
+  "description": "Api yang berfungsi untuk mengupdate Nameserver dari domain tertentu",
+  "properties": {
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "domain": {
+      "type": "string",
+      "default": "addin-swagger.com",
+      "description": "Nama domain\n",
+      "maxLength": 63
+    },
+    "api_id": {
+      "type": "integer",
+      "default": 277466,
+      "description": "Nilai yang merelasikan api dengan domain\n"
+    },
+    "nameserver": {
+      "type": "string",
+      "description": "Daftar Nameserver. Dipisahkan menggunakan koma berturut nameserver1, nameserver2, nameserver3(optional) , dan nameserver4(optional)\n",
+      "maxLength": 255
+    }
+  },
+  "required": [
+    "password",
+    "username",
+    "domain",
+    "api_id",
+    "nameserver"
+  ]
+}
