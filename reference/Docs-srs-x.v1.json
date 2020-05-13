@@ -1031,7 +1031,7 @@
         "description": "Api yang berfungsi untuk mentrasfer domain ke SRS-X. API ini memiliki fungsi yang sama dengan transfer domain, hanya saja tidak perlu memasukkan data contact dan user, cukup nickhandle dan userid.",
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/x-www-form-urlencoded": {
               "schema": {
                 "$ref": "../models/domain/domain-express-transfer.v1.json"
               }
@@ -1080,7 +1080,7 @@
         "description": "API yang digunakan untuk mengaktivasi karena suspend dari sebuah domain tertentu.",
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/x-www-form-urlencoded": {
               "schema": {
                 "$ref": "../models/domain/domain-unsuspend.v1.json"
               }
@@ -1104,12 +1104,13 @@
         "description": "API yang digunakan untuk mengeset fitur ID Protection untuk domain tertentu.",
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/x-www-form-urlencoded": {
               "schema": {
                 "$ref": "../models/domain/domain-setid-protection.v1.json"
               }
             }
-          }
+          },
+          "description": ""
         }
       }
     },
@@ -1177,7 +1178,7 @@
         "description": "API yang digunakan untuk membatalkan atau menghentikan langganan untuk domain tertentu.",
         "requestBody": {
           "content": {
-            "application/json": {
+            "application/x-www-form-urlencoded": {
               "schema": {
                 "$ref": "../models/domain/domain-cancel.v1.json"
               }
@@ -1223,6 +1224,10 @@
     }
   },
   "tags": [
+    {
+      "name": "Alibaba Mail",
+      "description": "Alibaba Mail description"
+    },
     {
       "name": "Contact",
       "description": "Contact description"

@@ -1,0 +1,65 @@
+{
+  "title": "Alibaba Mail Register",
+  "type": "object",
+  "x-tags": [
+    "Alibaba Mail"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "userid": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string",
+      "maxLength": 62,
+      "description": "Nama Domain"
+    },
+    "period": {
+      "type": "string",
+      "enum": [
+        "1m",
+        "3m",
+        "1y"
+      ],
+      "description": "Periode email"
+    },
+    "purchasedaccounts": {
+      "type": "integer",
+      "description": "Pembelian akun, minimal 3",
+      "minimum": 3
+    },
+    "productid": {
+      "type": "string",
+      "enum": [
+        "ALIMAILSTD",
+        "ALIMAILADV"
+      ],
+      "description": "ALIMAILSTD : Alimail Standard, ALIMAILADV : Alimail Advanced"
+    },
+    "randomhash": {
+      "type": "string"
+    },
+    "api_id": {
+      "type": "string",
+      "description": "hostingid or another id in request or system"
+    }
+  },
+  "required": [
+    "username",
+    "password",
+    "userid",
+    "domain",
+    "period",
+    "purchasedaccounts",
+    "productid"
+  ]
+}

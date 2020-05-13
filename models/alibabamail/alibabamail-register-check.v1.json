@@ -1,0 +1,31 @@
+{
+  "title": "Alibaba Mail Register Check",
+  "type": "object",
+  "x-tags": [
+    "Alibaba Mail"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama Domain"
+    },
+    "productid": {
+      "type": "integer",
+      "description": "Product ID"
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Alibaba Mail Renew",
+  "type": "object",
+  "x-tags": [
+    "Alibaba Mail"
+  ],
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": "w1vpmqz3",
+      "description": "API Username"
+    },
+    "password": {
+      "type": "string",
+      "default": "aCKeMeE9HcDP4CFgNWXAF9nqrZXp7T29",
+      "description": "API Password"
+    },
+    "productid": {
+      "type": "integer"
+    },
+    "api_id": {
+      "type": "integer",
+      "description": ""
+    },
+    "domain": {
+      "type": "string",
+      "description": "Nama Domain"
+    }
+  },
+  "required": [
+    "username",
+    "password"
+  ]
+}
