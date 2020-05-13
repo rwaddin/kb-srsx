@@ -1263,7 +1263,8 @@
           },
           "description": ""
         },
-        "description": "Cek Registrasi Alibaba Mail"
+        "description": "Cek Registrasi Alibaba Mail",
+        "deprecated": true
       }
     },
     "/v2/alimail/getinfo": {
