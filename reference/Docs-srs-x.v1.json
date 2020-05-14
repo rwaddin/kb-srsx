@@ -1,14 +1,10 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Docs srs-x",
+    "title": "kb.srs-x",
     "version": "1.0",
-    "description": "Docs srs-x Digital Registra",
-    "contact": {
-      "name": "Digital Registra",
-      "url": "https://www.digitalregistra.co.id/",
-      "email": "info@digitalregistra.co.id"
-    }
+    "description": "Dokumentasi kb.srs-x",
+    "contact": {}
   },
   "servers": [
     {
