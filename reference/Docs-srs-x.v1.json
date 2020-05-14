@@ -11,7 +11,7 @@
       "url": "http://srb{resellerid}.srs-x.net/api",
       "description": "Sandbox API reeller srsx",
       "variables": {
-        "resellerid" :{
+        "resellerid": {
           "default": "84",
           "description": "Reseller ID Anda di srs-x"
         }
@@ -1322,13 +1322,7 @@
     }
   },
   "components": {
-    "securitySchemes": {
-      "username": {
-        "name": "API Username",
-        "type": "apiKey",
-        "in": "header"
-      }
-    }
+    "securitySchemes": {}
   },
   "tags": [
     {
@@ -1374,11 +1368,6 @@
     {
       "name": "User",
       "description": "User description"
-    }
-  ],
-  "security": [
-    {
-      "username": []
     }
   ]
 }
