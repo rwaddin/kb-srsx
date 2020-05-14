@@ -8,6 +8,16 @@
   },
   "servers": [
     {
+      "url": "http://srb{resellerid}.srs-x.net/api",
+      "description": "Sandbox API reeller srsx",
+      "variables": {
+        "resellerid" :{
+          "default": "84",
+          "description": "Reseller ID Anda di srs-x"
+        }
+      }
+    },
+    {
       "url": "http://srb84.srs-x.net/api",
       "description": "Sandbox API srsx"
     },
