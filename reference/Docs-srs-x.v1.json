@@ -1321,9 +1321,6 @@
       }
     }
   },
-  "components": {
-    "securitySchemes": {}
-  },
   "tags": [
     {
       "name": "Alibaba Mail",
