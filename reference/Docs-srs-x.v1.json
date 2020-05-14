@@ -1366,10 +1366,6 @@
       "description": "User description"
     }
   ],
-  "externalDocs": {
-    "description": "Digital Registra",
-    "url": "http://google.com"
-  },
   "security": [
     {
       "username": []
