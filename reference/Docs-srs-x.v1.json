@@ -913,7 +913,29 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/soap+xml": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                },
+                "examples": {
+                  "example-1": {
+                    "value": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<epp>\n  <result>\n    <resultCode>1000</resultCode>\n    <resultMsg>Command Complete Successfully</resultMsg>\n  </result>\n  <resultData>\n    <domainid>35</domainid>\n    <api_id>0</api_id>\n    <userid>3</userid>\n    <domain>domain.co.id</domain>\n    <startdate>2013-04-20</startdate>\n    <enddate>2014-04-20</enddate>\n    <contact_registrant>11</contact_registrant>\n    <contact_admin>11</contact_admin>\n    <contact_billing>11</contact_billing>\n    <contact_tech>11</contact_tech>\n    <ns1>ns1.com</ns1>\n    <ns2>ns2.com</ns2>\n    <ns3/>\n    <ns4/>\n    <status>active</status>\n  </resultData>\n</epp>\n"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created"
           }
         },
         "operationId": "post-domain-info",
